@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coba</title>
+
+    <style>
+        body {
+            background-color: pink;
+            text-align: center;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 50px;
+        }
+
+        h1 {
+            font-size: 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick="toggleText()">Click ^_^</button>
+    <h1 id="tes"></h1>
+
+    <script>
+        let hilangkan = false;
+
+        function toggleText() {
+            let h1 = document.getElementById("tes");
+
+            if (hilangkan) {
+                h1.innerHTML = "";
+            } else {
+                h1.innerHTML = "I Love You <3";
+            }
+
+            hilangkan = !hilangkan;
+        }
+    </script>
+</body>
+</html>
