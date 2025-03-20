@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continue</title>
+</head>
+<body>
+    <h1>Yang ke skip angka 5</h1>
+    <h1 id="tes"></h1>
+
+    <script>
+        let txt = "";
+        for(let b = 1;b <= 15;b++){
+            if(b === 5) {continue}
+            txt += "Angka ke -" + b + "<br>"
+        }
+
+        document.getElementById("tes").innerHTML = txt;
+    </script>
+</body>
+</html>

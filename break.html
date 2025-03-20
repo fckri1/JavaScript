@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break</title>
+</head>
+<body>
+    <h1 id="tes"></h1>
+
+    <script>
+        const IT = ["Komputer","Notebook","Printer","UPS"]
+
+        let txt="";
+        list: {
+            txt += IT[0] + "<br>";
+            txt += IT[1] + "<br>";
+            break list;
+            txt += IT[2] + "<br>";
+            txt += IT[3] + "<br>";
+
+        }
+        document.getElementById("tes").innerHTML = txt;
+
+    </script>
+</body>
+</html>
