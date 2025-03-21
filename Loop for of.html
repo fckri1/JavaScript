@@ -9,11 +9,12 @@
     <h1 id="tes"></h1>
 
     <script>
-        let kata = "I Love You";
+        let kata = "I Love You <3";
 
         let text = "";
         for(let a of kata){
             text += a + "<br>";
+            console.log(a)
         }
 
       document.getElementById("tes").innerHTML = text;
