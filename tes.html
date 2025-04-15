@@ -1,31 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tes</title>
+    <title>Toggle Gambar</title>
+    <style>
+        body {
+            background-color: pink;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #gambar {
+            display: none;
+            width: 300px;
+            margin-top: 10px;
+        }
+
+        .button {
+            font-size: 24px;
+            padding: 15px 25px;
+            border-radius: 10px;
+            color: white;
+            background-color: black;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #ea {
+            display: none; /* Awalnya disembunyikan */
+            font-size: 24px;
+            padding: 15px 25px;
+            border-radius: 10px;
+            color: white;
+            background-color: red;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 45px;
+        }
+    </style>
 </head>
 <body>
-    <button onclick="anjay()">Slebeww</button>
-    <h1 id="r"></h1>
+
+    <button class="button" onclick="anjay()">Who you are?</button>
+    <br>
+    <img id="gambar" src="Untitled (1).png" alt="Gambar Muncul">
+    <h1 id="h1"></h1>
+    <button id="ea" onclick="sapa()">Sini klik</button>
 
     <script>
+        function anjay() {
+            var img = document.getElementById("gambar");
+            var text = document.getElementById("h1");
+            var bttn2 = document.getElementById("ea");
 
-        let cuyy = false;
-    
-        function anjay(){
-
-            let tai =document.getElementById("r");
-            
-            if(cuyy) {
-                tai.innerHTML = "Slebewww";
-            } else{
-                tai.innerHTML = "Anjayyy";
+            if (img.style.display === "none") {
+                img.style.display = "block";
+                text.innerHTML = "Mine ❤️";
+                bttn2.style.display = "inline-block"; // Menampilkan button kedua
+            } else {
+                img.style.display = "none";
+                text.innerHTML = "";
+                bttn2.style.display = "none"; // Menyembunyikan button kedua lagi
             }
+        }
 
-            cuyy = !cuyy;
-
+        function sapa() {
+            alert("I Love You! 💖");
         }
     </script>
+
 </body>
 </html>
